@@ -129,13 +129,13 @@ function(meta_parser_build)
         set_source_files_properties(${GENERATED_FILE} PROPERTIES GENERATED TRUE)
 
         # we have to create the files, as they might not be written to
-        if (NOT EXISTS ${GENERATED_FILE})
-            if ("${EXTENSION}" STREQUAL ".Generated.h")
-                file(WRITE ${GENERATED_FILE} "")
-            else ()
-                file(WRITE ${GENERATED_FILE} ${EMPTY_SOURCE_CONTENTS})
-            endif ()
-        endif ()
+        #if (NOT EXISTS ${GENERATED_FILE})
+        #    if ("${EXTENSION}" STREQUAL ".Generated.h")
+        #        file(WRITE ${GENERATED_FILE} "")
+        #    else ()
+        #        file(WRITE ${GENERATED_FILE} ${EMPTY_SOURCE_CONTENTS})
+        #    endif ()
+        #endif ()
     endforeach ()
 
     # add the command that generates the header and source files
